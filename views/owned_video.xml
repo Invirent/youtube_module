@@ -1,45 +1,64 @@
 <odoo>
-    <data>
-      <record id="my_video_list" model="ir.ui.view">
+    <record id="youtube_video_list" model="ir.ui.view">
         <field name="name">personal.youtube.video.form</field>
         <field name="model">youtube.content</field>
         <field name="arch" type="xml">
-          <form string="Youtube Video" create="False">
-            <sheet>
-              <div class="oe_button_box" name="button_box">
-                <button class="oe_stat_button" 
-                name="action_button_redirect"
-                icon="fa-globe"
-                type="object">
-                <div class="o_field_widget o_stat_info">
-                  <span class="o_stat_text">
-                    Redirect
-                  </span>
+            <form string="Youtube Video">
+                <sheet>
+                <div class="oe_button_box" name="button_box">
+                    <button class="oe_stat_button" 
+                    name="action_button_redirect"
+                    icon="fa-globe"
+                    type="object">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">
+                        Go To Youtube
+                        </span>
+                    </div>
+                    </button>
                 </div>
-                </button>
-              </div>
-              <div class="oe_title">
-                <label for="name" />
-                <h1>
-                    <field name="name"/>
-                </h1>
-              </div>
-              <notebook colspan="4">
-                <page name="general_info" string="General Info">
-                  <group>
-                    <group>
-                      <field class="video_date" readonly="1"/>
-                      <field class="viewer_total" readonly="1"/>
-                      <field class="like_count" readonly="1"/>
-                      <field class="dislike_count" readonly="1"/>
-                    </group>
-
-                  </group>
-                </page>
-              </notebook>
-            </sheet>
-          </form>
+                <div class="oe_title">
+                    <label for="name" class="font-weight-bold"/>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                </div>
+                <notebook colspan="4">
+                    <page name="general_info" string="General Info">
+                        <group>
+                            <group>
+                            <field name="video_date" readonly="1"/>
+                            <field name="viewer_total" readonly="1"/>
+                            <field name="like_count" readonly="1"/>
+                            <field name="dislike_count" readonly="1"/>
+                            </group>
+                            <group>
+                            <!-- <field name="link_redirect" readonly="1"/> -->
+                            <field name="channel_name" readonly="1"/>
+                            </group>
+                            <label for="youtube_desc" class="font-weight-bold"/>
+                            <field name="youtube_desc" placeholder="Youtube Description..."/>
+                        </group>
+                    </page>
+                </notebook>
+                </sheet>
+            </form>
         </field>
-      </record>
-    </data>
+    </record>
+    <record id="youtube_video_list_tree" model="ir.ui.view">
+        <field name="name">personal.youtube.video.tree</field>
+        <field name="model">youtube.content</field>
+        <field name="arch" type="xml">
+            <tree string="Videos" create="false">
+                <field name="channel_name"/>
+                <field name="name"/>
+                <field name="video_date"/>
+            </tree>
+        </field>
+    </record>
+    <record id="youtube_video_list_action" model="ir.actions.act_window">
+        <field name="name">My Video</field>
+        <field name="res_model">youtube.content</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 </odoo>

@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <menuitem id="youtube_navbar" 
+        name="Youtube" 
+        sequence="1"
+        web_icon="youtube_module,static/description/logo.jpg"
+        />
+
+        <menuitem id="youtube_profile"
+        name="Profile"
+        sequence="2"
+        parent="youtube_navbar"
+        groups="youtube_module.youtube_video_module"
+        />
+
+        <menuitem id="youtube_my_video"
+        name="Video"
+        sequence="20"
+        parent="youtube_profile"
+        action="youtube_module.youtube_video_list_action"
+        groups="youtube_module.youtube_video_module"
+        />
+        
+        <menuitem id="youtube_my_account"
+        name="Account"
+        sequence="30"
+        parent="youtube_profile"
+        action="youtube_module.youtube_account_list_action"
+        groups="youtube_module.youtube_video_module"
+        />
+
+    </data>
+</odoo>

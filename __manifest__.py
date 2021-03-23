@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "youtube_module",
+    'name': "Youtube Module",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -24,9 +24,12 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'views/owned_video.xml',
+        'views/asset.xml',
+        'views/youtube_profile_account.xml',
+        'views/youtube_menulist.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
