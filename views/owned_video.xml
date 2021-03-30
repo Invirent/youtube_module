@@ -49,7 +49,7 @@
         <field name="name">personal.youtube.video.tree</field>
         <field name="model">youtube.content</field>
         <field name="arch" type="xml">
-            <tree string="Videos" create="false">
+            <tree string="Videos">
                 <field name="channel_name"/>
                 <field name="name"/>
                 <field name="video_date"/>

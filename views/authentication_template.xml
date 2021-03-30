@@ -1,0 +1,20 @@
+<odoo>
+    <record id="youtube_oauth_wizard" model="ir.ui.view">
+        <field name="name">youtube.oauth.wizard</field>
+        <field name="model">youtube.profile</field>
+        <field name="mode">primary</field>
+        <field name="priority">2048</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <span>Please Insert your client secret file</span>
+                </group>
+                <group>
+                    <button action="upload_json" type="object">
+                        <span>Upload File</span>
+                    </button>
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>

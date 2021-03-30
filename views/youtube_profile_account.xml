@@ -2,22 +2,10 @@
 <odoo>
     <record id="youtube_account_view_form" model="ir.ui.view">
         <field name="name">youtube.account.view.form</field>
-        <field name="model">youtube.content</field>
+        <field name="model">youtube.profile</field>
         <field name="arch" type="xml">
             <form string="Account">
                 <sheet>
-                    <!-- <div class="oe_button_box" name="button_box">
-                        <button class="oe_stat_button" 
-                        name="#"
-                        icon="fa-globe"
-                        type="object">
-                        <div class="o_field_widget o_stat_info">
-                            <span class="o_stat_text">
-                            
-                            </span>
-                        </div>
-                        </button>
-                    </div> -->
                     <div class="oe_tittle">
                         <label for="channel_name" class="font-weight-bold"/>
                         <h1>
@@ -31,7 +19,6 @@
                                     <field name="channel_date" readonly="1"/>
                                     <field name="subs_count" readonly="1"/>
                                     <field name="playlist_count" readonly="1"/>
-                                    <field name="youtube_id"/>
                                 </group>
                             </group>
                         </page>
@@ -42,7 +29,7 @@
     </record>
     <record id="youtube_account_list_tree" model="ir.ui.view">
         <field name="name">personal.youtube.account.tree</field>
-        <field name="model">youtube.content</field>
+        <field name="model">youtube.profile</field>
         <field name="arch" type="xml">
             <tree string="Account">
                 <field name="channel_name"/>
@@ -53,7 +40,7 @@
     </record>
     <record id="youtube_account_list_action" model="ir.actions.act_window">
         <field name="name">My Profile</field>
-        <field name="res_model">youtube.content</field>
+        <field name="res_model">youtube.profile</field>
         <field name="view_mode">tree,form</field>
     </record>
 </odoo>

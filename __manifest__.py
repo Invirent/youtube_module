@@ -24,12 +24,12 @@
 
     # always loaded
     'data': [
+        'views/youtube_profile_account.xml',
+        'views/owned_video.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
-        'views/owned_video.xml',
-        'views/asset.xml',
-        'views/youtube_profile_account.xml',
         'views/youtube_menulist.xml',
+        'views/asset.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

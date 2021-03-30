@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_youtube_menulist,youtube_module.youtube_nav_menu,model_youtube_content,youtube_module.youtube_video_module,1,1,1,1
+access_youtube_profile_menu,youtube_module.youtube_profile_menu,model_youtube_profile,youtube_module.youtube_video_module,1,1,1,1
